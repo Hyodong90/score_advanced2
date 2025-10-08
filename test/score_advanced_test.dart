@@ -1,10 +1,8 @@
-import 'package:score_advanced/score_advanced.dart';
-import 'package:test/test.dart';
-
 class Idol {
   String name;
   List<String> members;
 
+  // 네임드 파라미터 사용
   Idol({required this.name, required this.members});
 
   void introduce() {
@@ -22,8 +20,4 @@ class BoyIdol extends Idol {
 void main() {
   Idol blackpink = Idol(name: "블랙핑크", members: ["리사", "제니", "지수"]);
   blackpink.introduce();
-
-  BoyIdol bts = BoyIdol(name: "BTS", members: ["RM", "진", "슈가"], age: 7);
-  bts.introduce();
-  print("BTS 그룹 나이: ${bts.age}");
 }

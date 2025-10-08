@@ -15,7 +15,7 @@ class StudentScore extends Score {
   String name;
 
   // super 부모클래스 가져오기
-  StudentScore(this.name, int score) : super(score);
+  StudentScore(this.name, super.score);
 
   //부보 show 재정의
   @override
@@ -26,13 +26,13 @@ class StudentScore extends Score {
 
 void main() {
   // 기본 Score 클래스 사용
-  var a1 = Score(90);
+  Score a1 = Score(90);
   a1.show();
 
   print("-----------");
   // 상속받은 StudentScore 클래스 사용
-  var a2 = StudentScore("홍길동", 90);
-  var a3 = StudentScore("김철수", 80);
+  StudentScore a2 = StudentScore("홍길동", 90);
+  StudentScore a3 = StudentScore("김철수", 80);
 
   a2.show();
   a3.show();
