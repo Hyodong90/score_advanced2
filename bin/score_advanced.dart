@@ -25,12 +25,15 @@ class StudentScore extends Score {
     print("이름: $name, 점수: $score");
   }
 
+  //score도 한번에 스트링으로 출력하기위해 변환
   @override
   String toString() => "이름: $name, 점수: $score";
 }
 
 // 파일에서 학생 데이터 읽기
 List<StudentScore> loadStudentData(String filePath) {
+
+  //studentScore를 studentlist안에 리스트형태로 저장
   List<StudentScore> studentList = [];
 
   try {
